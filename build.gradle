@@ -32,6 +32,8 @@ dependencies {
 
     // Include Mockito
     testCompile "org.mockito:mockito-core:2.+"
+
+    testImplementation 'org.mockito:mockito-junit-jupiter:2.+'
 }
 
 application {
