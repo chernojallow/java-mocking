@@ -7,7 +7,7 @@ class MortgageLender {
      * @return
      */
     public boolean doesApplicantQualify(LoanApplicant applicant) throws Exception {
-        CreditAnalyzer creditAnalyzer = new CreditAnalyzer();
+        CreditAnalyzer creditAnalyzer = new Experian();
         int creditScore = creditAnalyzer.getCreditScore(applicant.getSocialSecurityNumber());
 
         return creditScore > 600 && (applicant.getMonthlyGrossIncome().compareTo(applicant.getMonthlyDebtLoad()) == 1);
