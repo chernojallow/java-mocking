@@ -6,6 +6,14 @@ class MortgageLender {
      * @param applicant
      * @return
      */
+
+    private CreditAnalyzer creditAnalyzer;
+
+    public MortgageLender(CreditAnalyzer creditAnalyzer){
+        this.creditAnalyzer = creditAnalyzer;
+
+    }
+
     public boolean doesApplicantQualify(LoanApplicant applicant) throws Exception {
         CreditAnalyzer creditAnalyzer = new Experian();
         int creditScore = creditAnalyzer.getCreditScore(applicant.getSocialSecurityNumber());
